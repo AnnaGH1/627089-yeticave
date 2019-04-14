@@ -6,6 +6,7 @@ $title = 'Главная';
 $is_auth = rand(0, 1);
 $user_name = 'John Smith';
 $currency = '₽';
+$time_active = date('H:i:s',strtotime('tomorrow') - time());
 
 $categories = [
     'Доски и лыжи',
@@ -58,7 +59,8 @@ $items = [
 $content = include_template('index.php', [
     'currency' => $currency,
     'categories' => $categories,
-    'items' => $items
+    'items' => $items,
+    'time_active' => $time_active
 ]);
 
 $layout = include_template('layout.php', [

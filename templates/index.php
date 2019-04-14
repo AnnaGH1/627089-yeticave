@@ -43,7 +43,7 @@
                         </span>
                         </div>
                         <div class="lot__timer timer">
-                            12:23
+                            <?= $time_active ?>
                         </div>
                     </div>
                 </div>
